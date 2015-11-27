@@ -1,6 +1,39 @@
 #title YARV: Yet another RubyVM - Software Architecture
+#set author Kōichi SASADA
 
-maybe writing.
+* What is this?
+
+This is a design document for
+[[YARV: Yet Another RubyVM|http://www.atdot.net/yarv]].
+
+YARV serves the following purposes for a Ruby program:
+
+- Compiler
+- VM Generator
+- VM (Virtual Machine)
+- Assembler
+- Dis-Assembler
+- (experimental) JIT Compiler
+- (experimental) AOT Compiler
+
+
+Currently YARV is implemented as an add-on library to the Ruby interpreter.
+In this way [koreniyori], the necessary features of the Ruby interpreter
+(parser, object manager, existing libraries) can be used almost without
+change.
+
+However, a few patches had to be applied to the Ruby interpreter.
+
+Hereafter
+to replace main part of the Ruby interpreter (eval.c)
+to aim
+continue developing
+plan is
+今後は、Ruby 本体のインタプリタ部分（eval.c）を置き換えることを目指して
+開発を継続する予定です。
+
+
+
 
 * YARV instruction set
 
